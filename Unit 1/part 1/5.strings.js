@@ -1,3 +1,5 @@
+'use strict';
+
 let text = "I am an amazing mammal, and it's 8am";
 let search = "am";
 
@@ -20,4 +22,6 @@ console.log("asdf".repeat(6));
 console.log("Monkey: \u{1f435}");
 console.log("Cat: \u{1f431}");
 console.log("Cat: 🐱🐱🐱🐱🐱🐱🐱🐱🐱");
+
+console.log("12" > 9);
 
