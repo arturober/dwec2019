@@ -70,3 +70,23 @@ if(words.length) {
     let str = words.reduce((total, word) => total + " -*- " + word);
     console.log(str); // cat -*- house -*- head -*- table -*- escalator
 }
+
+words.forEach(e => console.log(e));
+words.forEach((e, i, array) => {
+    console.log(`${i}: ${e}`);
+});
+
+function modArray(array) {
+    array[0] = 100;
+    array[1] = 101;
+    array[2] = 102;
+}
+
+let a1 = [1, 2, 3, 4, 5];
+// let a2 = a1;
+// a2[0] = 99;
+// console.log(a1[0]); // 99
+
+modArray(a1);
+console.log(a1.toString()); // 100,101,102,4,5
+
