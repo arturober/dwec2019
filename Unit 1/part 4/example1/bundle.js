@@ -1,0 +1,1 @@
+"strict mode";function printNum(){var n=120;return console.log("Recibido: "+n),2*n}var num=0;console.log(num),printNum();

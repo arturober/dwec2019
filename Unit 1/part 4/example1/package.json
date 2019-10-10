@@ -1,0 +1,26 @@
+{
+  "name": "example1",
+  "version": "1.0.0",
+  "description": "NPM example",
+  "main": "index.js",
+  "scripts": {
+    "hello": "echo \"Hello world\"",
+    "test": "eslint js/*",
+    "pretest": "echo \"We are going to make some tests\"",
+    "posttest": "echo \"Test successful!\"",
+    "build": "uglifyjs -mc -o bundle.js js/*.js",
+    "build:watch": "watch \"npm run build\" ./js",
+    "serve": "lite-server",
+    "start": "concurrently \"npm run serve\" \"npm run build:watch\""
+  },
+  "author": "Arturo",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "eslint": "^6.5.1",
+    "lite-server": "^2.5.4",
+    "uglify": "^0.1.5",
+    "watch": "^1.0.2"
+  }
+}
