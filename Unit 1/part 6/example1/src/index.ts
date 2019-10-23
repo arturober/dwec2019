@@ -1,5 +1,5 @@
-import { Observable, Observer, of, from, interval, fromEvent } from 'rxjs';
-import { take, map, filter, reduce, last, scan, endWith, pluck, skip, skipWhile, delay, concatMap, distinct, distinctUntilChanged, debounceTime, tap, switchMap } from 'rxjs/operators';
+import { Observable, Observer, of, from, interval, fromEvent, partition } from 'rxjs';
+import { take, map, filter, reduce, last, scan, endWith, pluck, skip, skipWhile, delay, concatMap, distinct, distinctUntilChanged, debounceTime, tap, switchMap, pairwise } from 'rxjs/operators';
 
 // let obs$ = new Observable<number>(observer => {
 //     observer.next(3);
@@ -126,9 +126,27 @@ import { take, map, filter, reduce, last, scan, endWith, pluck, skip, skipWhile,
 //     n => console.log(n) // 1 3 2
 // )
 
-of(1, 1, 3, 3, 3, 2, 2, 1, 3, 2).pipe(
-    concatMap(x => of(x).pipe(delay(1000))),
-    distinctUntilChanged()
-).subscribe(console.log)
+// of(1, 1, 3, 3, 3, 2, 2, 1, 3, 2).pipe(
+//     concatMap(x => of(x).pipe(delay(1000))),
+//     distinctUntilChanged()
+// ).subscribe(console.log)
 
 
+// fromEvent<MouseEvent>(document, 'click').pipe(
+//     pairwise(),
+//     map(pair => {
+//         const x0 = pair[0].clientX;
+//         const y0 = pair[0].clientY;
+//         const x1 = pair[1].clientX;
+//         const y1 = pair[1].clientY;
+//         return Math.sqrt(Math.pow(x0 - x1, 2) + Math.pow(y0 - y1, 2));
+//     }),
+// ).subscribe(x => console.log(x));
+
+const [pair$, odd$] = partition<number>(interval(500), (v, i) => v % 2 === 0);
+pair$.subscribe(
+    v => console.log("Pair: " + v)
+);
+odd$.subscribe(
+    v => console.log("Odd: " + v)
+);
