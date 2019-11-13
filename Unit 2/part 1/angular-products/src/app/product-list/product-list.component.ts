@@ -14,6 +14,11 @@ export class ProductListComponent implements OnInit {
     price: 'Price',
     available: 'Available'
   };
+  colors = ['red', 'green', 'blue', 'yellow'];
+  color = 0;
+  showImage = true;
+  filterSearch = '';
+
   products: IProduct[] = [
     {
       id: 1,
@@ -30,10 +35,26 @@ export class ProductListComponent implements OnInit {
       price: 96.95,
       imageUrl: 'assets/motherboard.jpg',
       rating: 4
+    },
+    {
+      id: 2,
+      description: '2TB hard drive',
+      available: new Date('2018-12-01'),
+      price: 75.95,
+      imageUrl: 'assets/hdd.jpg',
+      rating: 3
     }
   ];
 
   constructor() {}
 
   ngOnInit() {}
+
+  changeColor() {
+    this.color = Math.floor(Math.random() * 4);
+  }
+
+  toggleImage() {
+    this.showImage = !this.showImage;
+  }
 }

@@ -5,3 +5,7 @@ td {
 td:first-child img {
   height: 40px;
 }
+
+td.even {
+  background-color: beige;
+}
