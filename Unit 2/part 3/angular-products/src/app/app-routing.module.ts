@@ -7,6 +7,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductIdGuard } from './guards/product-id.guard';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { CanDeactivateGuard } from './guards/can-deactivate.guard';
+import { ProductDetailResolve } from './resolvers/product-detail.resolve';
 
 const routes: Route[] = [
   {path: 'welcome', component: WelcomeComponent},
@@ -14,13 +15,19 @@ const routes: Route[] = [
   {
     path: 'products/:id',
     component: ProductDetailComponent,
-    canActivate: [ProductIdGuard]
+    canActivate: [ProductIdGuard],
+    resolve: {
+      product: ProductDetailResolve
+    }
   },
   {
     path: 'products/:id/edit',
     component: ProductEditComponent,
     canActivate: [ProductIdGuard],
-    canDeactivate: [CanDeactivateGuard]
+    canDeactivate: [CanDeactivateGuard],
+    resolve: {
+      product: ProductDetailResolve
+    }
   },
   {path: '', pathMatch: 'full', redirectTo: '/welcome'},
   {path: '**', pathMatch: 'full', redirectTo: '/welcome'},

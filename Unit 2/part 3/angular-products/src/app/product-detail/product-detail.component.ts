@@ -20,10 +20,7 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.params.id;
-    this.productsService.getProduct(id).subscribe(
-      product => this.product = product
-    );
+    this.product = this.route.snapshot.data.product;
   }
 
   changeRating(rating: number) {
