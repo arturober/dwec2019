@@ -1,0 +1,17 @@
+<h1 adSetColor [color]="color">{{title}}</h1>
+<p adSetColor [color]="color">I'm a paragraph</p>
+<p adSetColor color="#ddd">Another paragraph</p>
+
+<select [(ngModel)]="color">
+  <option value="yellow">Yellow</option>
+  <option value="red">Red</option>
+  <option value="#06F">Blue</option>
+ </select>
+
+<div *ngIf="color == 'yellow'; else elseColor">Selected color: Yellow</div>
+<ng-template #elseColor>
+  <div>I don't like this color</div>
+</ng-template>
+
+<h3 *adRepeatTimes="6; let i = index; let isPair = pair"
+  [ngClass]="{'pair': isPair}">Repeating number {{i}}</h3>
