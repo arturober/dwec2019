@@ -7,7 +7,6 @@ import {
   CanDeactivate
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ProductEditComponent } from '../product-edit/product-edit.component';
 
 export interface CanComponentDeactivate {
   canDeactivate: () => boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree>;

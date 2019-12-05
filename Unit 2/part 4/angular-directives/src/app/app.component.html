@@ -15,3 +15,7 @@
 
 <h3 *adRepeatTimes="6; let i = index; let isPair = pair"
   [ngClass]="{'pair': isPair}">Repeating number {{i}}</h3>
+
+<p *adForFilter="let product from prods by filter">
+  {{product | json}}
+</p>

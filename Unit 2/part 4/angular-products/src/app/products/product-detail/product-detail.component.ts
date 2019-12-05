@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, UrlTree } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 import { IProduct } from '../interfaces/i-product';
-import { CanComponentDeactivate } from '../guards/can-deactivate.guard';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'product-detail',

@@ -32,11 +32,23 @@ export class ProductsService {
   }
 
   changeRating(idProduct: number, rating: number): Observable<void> {
-    return this.http.put<void>('products/' + idProduct + '/rating', {rating})
+    return this.http
+      .put<void>('products/' + idProduct + '/rating', { rating })
       .pipe(
         catchError((resp: HttpErrorResponse) =>
-          throwError(`Error changing rating. Status: ${resp.status}. Message: ${resp.message}`)
+          throwError(
+            `Error changing rating. Status: ${resp.status}. Message: ${resp.message}`
+          )
         )
       );
+  }
+
+  updateProduct(product: IProduct): Observable<IProduct> {
+    return this.http.put<ResponseProduct>('products/' + product.id, product).pipe(
+      map(response => response.product),
+      catchError((response: Response) =>
+        throwError(`Error updating product ${product.id}!`)
+      )
+    );
   }
 }
