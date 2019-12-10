@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutWrap class="zero">
+  <div fxFlex="33" fxFlex.xs="50" class="one"></div>
+  <div fxFlex="33" fxFlex.xs="" fxLayout="column" fxLayout.xs="row" class="two">
+    <div fxFlex="20" class="two_one"></div>
+    <div fxFlex="40px" class="two_two"></div>
+    <div fxFlex class="two_three"></div>
+  </div>
+  <div fxFlex fxShow fxHide.xs="true" class="three"></div>
+ </div>
+
+<button mat-raised-button color="primary" (click)="openDialog()">
+  <mat-icon>account_circle</mat-icon>
+  Open dialog
+</button>
+<p>{{response}}</p>
