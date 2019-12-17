@@ -1,0 +1,14 @@
+<form [formGroup]="userForm">
+  <p><input type="text" placeholder="Name" formControlName="name"></p>
+  <p><input type="email" placeholder="email" formControlName="email"></p>
+  <p><input type="tel" placeholder="Phone" formControlName="phone"></p>
+  <p><input type="password" placeholder="Password" formControlName="password"></p>
+  <p>Notify by:
+    <input type="radio" formControlName="notifications" value="email"> Email
+    <input type="radio" formControlName="notifications" value="phone"> Phone
+  </p>
+ </form>
+ <p><button (click)="setDemoData()">Demo values</button></p>
+
+<p>{{userForm.value | json}}</p>
+<p>Name modified: {{userForm.get('name').dirty}}</p>

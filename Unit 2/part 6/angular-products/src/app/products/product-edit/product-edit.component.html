@@ -1,0 +1,105 @@
+<div class="card">
+  <div class="card-header bg-success text-white">
+    Edit product
+  </div>
+  <div class="card-block p-3">
+    <form #productForm="ngForm" (ngSubmit)="editProduct()">
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-sm-right">Description</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            #descModel="ngModel"
+            [(ngModel)]="product.description"
+            minlength="5"
+            maxlength="60"
+            required
+            [ngClass]="validClasses(descModel, 'is-valid', 'is-invalid')"
+          />
+          <div class="invalid-feedback" *ngIf="descModel.getError('required')">
+            Description is required
+          </div>
+          <div class="invalid-feedback" *ngIf="descModel.getError('minlength')">
+            Description must have at least 5 characters
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-sm-right">Price</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            name="price"
+            [(ngModel)]="product.price"
+            min="0"
+            step="0.01"
+            required
+            #priceModel="ngModel"
+            [ngClass]="validClasses(priceModel, 'is-valid', 'is-invalid')"
+          />
+          <div class="invalid-feedback">
+            Price is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label text-sm-right">Available</label>
+        <div class="col-sm-10">
+          <input
+            type="datetime-local"
+            class="form-control"
+            name="available"
+            [(ngModel)]="product.available"
+            #availModel="ngModel"
+            required
+            minDate="2019-01-01"
+            [ngClass]="validClasses(availModel, 'is-valid', 'is-invalid')"
+          />
+          <div class="invalid-feedback" *ngIf="availModel.getError('required')">
+            Date is required
+          </div>
+          <div class="invalid-feedback" *ngIf="availModel.getError('minDate')">
+            Date cannot be before 2019-01-01
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label text-sm-right">
+          Image</label
+        >
+        <div class="col-sm-10">
+          <input
+            type="file"
+            name="image"
+            #fileImage
+            class="form-control"
+            accept="image/*"
+            (change)="changeImage(fileImage)"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10 offset-sm-2">
+          <img class="product-img" [src]="product.imageUrl" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="productForm.invalid || !product.imageUrl"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+    <div>Touched: {{ productForm.touched }}</div>
+    <div>Valid: {{ productForm.valid }}</div>
+    <div>Value: {{ productForm.value | json }}</div>
+  </div>
+</div>
