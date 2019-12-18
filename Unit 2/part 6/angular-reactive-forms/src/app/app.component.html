@@ -1,14 +1,23 @@
 <form [formGroup]="userForm">
   <p><input type="text" placeholder="Name" formControlName="name"></p>
-  <p><input type="email" placeholder="email" formControlName="email"></p>
-  <p><input type="tel" placeholder="Phone" formControlName="phone"></p>
+  <div formGroupName="emailGroup">
+    <p><input type="email" placeholder="Email" formControlName="email"></p>
+    <p><input type="email" placeholder="Repeat Email" formControlName="emailConfirm"></p>
+  </div>
+  <div formArrayName="phones" *ngFor="let phone of phones.controls; let i = index">
+    <p><input type="tel" placeholder="Phone {{i + 1}}" [formControlName]="i"></p>
+  </div>
   <p><input type="password" placeholder="Password" formControlName="password"></p>
   <p>Notify by:
     <input type="radio" formControlName="notifications" value="email"> Email
     <input type="radio" formControlName="notifications" value="phone"> Phone
   </p>
+  <p><input type="date" placeholder="Birth date" formControlName="birthDate"></p>
+
  </form>
  <p><button (click)="setDemoData()">Demo values</button></p>
+ <p><button (click)="addPhone()">Add Phone</button></p>
 
 <p>{{userForm.value | json}}</p>
 <p>Name modified: {{userForm.get('name').dirty}}</p>
+<p>Phone 1: {{phones.get('0').value}}</p>

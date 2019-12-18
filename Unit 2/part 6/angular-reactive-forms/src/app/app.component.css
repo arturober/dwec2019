@@ -5,3 +5,8 @@ input.ng-touched.ng-invalid {
 input.ng-touched.ng-valid {
   border: 1px solid green;
 }
+
+div.ng-invalid[formGroupName="emailGroup"]
+  input.ng-touched[formControlName="emailConfirm"] {
+  border: 1px solid red;
+}
