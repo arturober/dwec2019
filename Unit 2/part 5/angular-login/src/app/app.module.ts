@@ -16,9 +16,9 @@ import { FacebookLoginModule } from './facebook-login/facebook-login.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    GoogleLoginModule.forRoot('GOOGLE_ID'),
+    GoogleLoginModule.forRoot('667204529710-2b9jd5idoqepfe6ahpq3qo9kvtkmpdcb.apps.googleusercontent.com'),
     FacebookLoginModule.forRoot({
-      appId: 'FB_ID',
+      appId: '452581145459274',
       version: 'v5.0'
     }),
     MatButtonModule,
