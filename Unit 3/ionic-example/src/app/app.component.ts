@@ -12,6 +12,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
+      title: 'Alerts',
+      url: '/alerts',
+      icon: 'alert'
+    },
+    {
       title: 'Buttons',
       url: '/buttons',
       icon: 'logo-buffer'
@@ -20,6 +25,31 @@ export class AppComponent {
       title: 'Lists',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Inputs',
+      url: '/inputs',
+      icon: 'text'
+    },
+    {
+      title: 'Cards',
+      url: '/cards',
+      icon: 'albums'
+    },
+    {
+      title: 'Checkbox & Radio',
+      url: '/checkbox-radio',
+      icon: 'checkbox'
+    },
+    {
+      title: 'Badges',
+      url: '/badges',
+      icon: 'square'
+    },
+    {
+      title: 'Toast',
+      url: '/toast',
+      icon: 'alert'
     },
   ];
 
