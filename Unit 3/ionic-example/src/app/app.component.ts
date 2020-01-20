@@ -12,6 +12,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
+      title: 'Action Sheet',
+      url: '/action-sheet',
+      icon: 'menu'
+    },
+    {
       title: 'Alerts',
       url: '/alerts',
       icon: 'alert'
@@ -47,9 +52,19 @@ export class AppComponent {
       icon: 'square'
     },
     {
+      title: 'Tabs',
+      url: '/tabs',
+      icon: 'copy'
+    },
+    {
       title: 'Toast',
       url: '/toast',
       icon: 'alert'
+    },
+    {
+      title: 'Fabs',
+      url: '/fabs',
+      icon: 'add-circle'
     },
   ];
 

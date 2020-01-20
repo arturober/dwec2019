@@ -38,6 +38,18 @@ const routes: Routes = [
   {
     path: 'alerts',
     loadChildren: () => import('./alerts/alerts.module').then( m => m.AlertsPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
+  {
+    path: 'fabs',
+    loadChildren: () => import('./fabs/fabs.module').then( m => m.FabsPageModule)
   }
 ];
 
