@@ -50,6 +50,18 @@ const routes: Routes = [
   {
     path: 'fabs',
     loadChildren: () => import('./fabs/fabs.module').then( m => m.FabsPageModule)
+  },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./loading/loading.module').then( m => m.LoadingPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./popover/popover.module').then( m => m.PopoverPageModule)
   }
 ];
 

@@ -22,19 +22,14 @@ export class AppComponent {
       icon: 'alert'
     },
     {
+      title: 'Badges',
+      url: '/badges',
+      icon: 'square'
+    },
+    {
       title: 'Buttons',
       url: '/buttons',
       icon: 'logo-buffer'
-    },
-    {
-      title: 'Lists',
-      url: '/list',
-      icon: 'list'
-    },
-    {
-      title: 'Inputs',
-      url: '/inputs',
-      icon: 'text'
     },
     {
       title: 'Cards',
@@ -47,9 +42,34 @@ export class AppComponent {
       icon: 'checkbox'
     },
     {
-      title: 'Badges',
-      url: '/badges',
-      icon: 'square'
+      title: 'Fabs',
+      url: '/fabs',
+      icon: 'add-circle'
+    },
+    {
+      title: 'Grid',
+      url: '/grid',
+      icon: 'grid'
+    },
+    {
+      title: 'Inputs',
+      url: '/inputs',
+      icon: 'text'
+    },
+    {
+      title: 'Lists',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'Loading',
+      url: '/loading',
+      icon: 'refresh'
+    },
+    {
+      title: 'Popover',
+      url: '/popover',
+      icon: 'albums'
     },
     {
       title: 'Tabs',
@@ -61,11 +81,7 @@ export class AppComponent {
       url: '/toast',
       icon: 'alert'
     },
-    {
-      title: 'Fabs',
-      url: '/fabs',
-      icon: 'add-circle'
-    },
+
   ];
 
   constructor(
