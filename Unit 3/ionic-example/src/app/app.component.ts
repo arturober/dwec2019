@@ -52,6 +52,16 @@ export class AppComponent {
       icon: 'grid'
     },
     {
+      title: 'Horizontal Scroll',
+      url: '/horizontal-scroll',
+      icon: 'arrow-dropright-circle'
+    },
+    {
+      title: 'Infinite Scroll',
+      url: '/infinite-scroll',
+      icon: 'infinite'
+    },
+    {
       title: 'Inputs',
       url: '/inputs',
       icon: 'text'
@@ -72,6 +82,36 @@ export class AppComponent {
       icon: 'albums'
     },
     {
+      title: 'Range',
+      url: '/range',
+      icon: 'pin'
+    },
+    {
+      title: 'Refresher',
+      url: '/refresher',
+      icon: 'refresh-circle'
+    },
+    {
+      title: 'Reorder',
+      url: '/reorder',
+      icon: 'reorder'
+    },
+    {
+      title: 'Searchbar',
+      url: '/searchbar',
+      icon: 'search'
+    },
+    {
+      title: 'Segments',
+      url: '/segments',
+      icon: 'bookmarks'
+    }, 
+    {
+      title: 'Slides',
+      url: '/slides',
+      icon: 'images'
+    },
+    {
       title: 'Tabs',
       url: '/tabs',
       icon: 'copy'
@@ -81,7 +121,16 @@ export class AppComponent {
       url: '/toast',
       icon: 'alert'
     },
-
+    {
+      title: 'Toolbars',
+      url: '/toolbars',
+      icon: 'browsers'
+    },
+    {
+      title: 'Virtual Scroll',
+      url: '/virtual-scroll',
+      icon: 'fastforward'
+    },
   ];
 
   constructor(
