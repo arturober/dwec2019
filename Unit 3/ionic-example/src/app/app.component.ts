@@ -82,6 +82,11 @@ export class AppComponent {
       icon: 'refresh'
     },
     {
+      title: 'Modal',
+      url: '/modal',
+      icon: 'albums'
+    },
+    {
       title: 'Popover',
       url: '/popover',
       icon: 'albums'
