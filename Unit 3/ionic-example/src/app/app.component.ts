@@ -47,6 +47,11 @@ export class AppComponent {
       icon: 'add-circle'
     },
     {
+      title: 'Gestures',
+      url: '/gestures',
+      icon: 'hand'
+    },
+    {
       title: 'Grid',
       url: '/grid',
       icon: 'grid'
@@ -105,7 +110,17 @@ export class AppComponent {
       title: 'Segments',
       url: '/segments',
       icon: 'bookmarks'
-    }, 
+    },
+    {
+      title: 'Select',
+      url: '/select',
+      icon: 'checkbox'
+    },
+    {
+      title: 'Skeleton',
+      url: '/skeleton',
+      icon: 'list'
+    },
     {
       title: 'Slides',
       url: '/slides',

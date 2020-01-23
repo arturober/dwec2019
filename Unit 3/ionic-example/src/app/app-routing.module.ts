@@ -102,6 +102,22 @@ const routes: Routes = [
   {
     path: 'virtual-scroll',
     loadChildren: () => import('./virtual-scroll/virtual-scroll.module').then( m => m.VirtualScrollPageModule)
+  },
+  {
+    path: 'gestures',
+    loadChildren: () => import('./gestures/gestures.module').then( m => m.GesturesPageModule)
+  },
+  {
+    path: 'skeleton',
+    loadChildren: () => import('./skeleton/skeleton.module').then( m => m.SkeletonPageModule)
+  },
+  {
+    path: 'select',
+    loadChildren: () => import('./select/select.module').then( m => m.SelectPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
   }
 ];
 
