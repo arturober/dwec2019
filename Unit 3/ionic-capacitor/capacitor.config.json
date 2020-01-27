@@ -1,8 +1,0 @@
-{
-  "appId": "com.example.capacitor",
-  "appName": "Ionic Capacitor",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "cordova": {}
-}
