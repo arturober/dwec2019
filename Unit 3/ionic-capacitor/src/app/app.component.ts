@@ -13,6 +13,11 @@ const { SplashScreen, StatusBar } = Plugins;
 export class AppComponent {
   public appPages = [
     {
+      title: 'App',
+      url: '/app',
+      icon: 'apps'
+    },
+    {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
@@ -28,6 +33,11 @@ export class AppComponent {
       icon: 'phone-portrait'
     },
     {
+      title: 'Driving directions',
+      url: '/driving-directions',
+      icon: 'navigate'
+    },
+    {
       title: 'Filesystem',
       url: '/filesystem',
       icon: 'folder'
@@ -38,6 +48,11 @@ export class AppComponent {
       icon: 'pin'
     },
     {
+      title: 'Google Login',
+      url: '/google-login',
+      icon: 'logo-googleplus'
+    },
+    {
       title: 'Keyboard',
       url: '/keyboard',
       icon: 'keypad'
@@ -46,6 +61,36 @@ export class AppComponent {
       title: 'Local notifications',
       url: '/local-notifications',
       icon: 'notifications'
+    },
+    {
+      title: 'Modals',
+      url: '/modals',
+      icon: 'alert'
+    },
+    {
+      title: 'Motion',
+      url: '/motion',
+      icon: 'move'
+    },
+    {
+      title: 'Network',
+      url: '/network',
+      icon: 'wifi'
+    },
+    {
+      title: 'Social sharing',
+      url: '/share',
+      icon: 'share'
+    },
+    {
+      title: 'Storage',
+      url: '/storage',
+      icon: 'logo-buffer'
+    },
+    {
+      title: 'Toast',
+      url: '/toast',
+      icon: 'alarm'
     },
     {
       title: 'Vibration',

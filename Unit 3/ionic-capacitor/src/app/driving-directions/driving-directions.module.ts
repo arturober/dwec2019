@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GeolocationPageRoutingModule } from './geolocation-routing.module';
+import { DrivingDirectionsPageRoutingModule } from './driving-directions-routing.module';
 
-import { GeolocationPage } from './geolocation.page';
+import { DrivingDirectionsPage } from './driving-directions.page';
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
     CommonModule,
     FormsModule,
     IonicModule,
-    GeolocationPageRoutingModule,
+    DrivingDirectionsPageRoutingModule,
     NgxMapboxGLModule
   ],
-  declarations: [GeolocationPage]
+  declarations: [DrivingDirectionsPage]
 })
-export class GeolocationPageModule {}
+export class DrivingDirectionsPageModule {}

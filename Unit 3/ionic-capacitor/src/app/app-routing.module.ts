@@ -38,6 +38,42 @@ const routes: Routes = [
   {
     path: 'local-notifications',
     loadChildren: () => import('./local-notifications/local-notifications.module').then( m => m.LocalNotificationsPageModule)
+  },
+  {
+    path: 'modals',
+    loadChildren: () => import('./modals/modals.module').then( m => m.ModalsPageModule)
+  },
+  {
+    path: 'motion',
+    loadChildren: () => import('./motion/motion.module').then( m => m.MotionPageModule)
+  },
+  {
+    path: 'network',
+    loadChildren: () => import('./network/network.module').then( m => m.NetworkPageModule)
+  },
+  {
+    path: 'share',
+    loadChildren: () => import('./share/share.module').then( m => m.SharePageModule)
+  },
+  {
+    path: 'storage',
+    loadChildren: () => import('./storage/storage.module').then( m => m.StoragePageModule)
+  },
+  {
+    path: 'toast',
+    loadChildren: () => import('./toast/toast.module').then( m => m.ToastPageModule)
+  },
+  {
+    path: 'driving-directions',
+    loadChildren: () => import('./driving-directions/driving-directions.module').then( m => m.DrivingDirectionsPageModule)
+  },
+  {
+    path: 'app',
+    loadChildren: () => import('./app/app.module').then( m => m.AppPageModule)
+  },
+  {
+    path: 'google-login',
+    loadChildren: () => import('./google-login/google-login.module').then( m => m.GoogleLoginPageModule)
   }
 ];
 
