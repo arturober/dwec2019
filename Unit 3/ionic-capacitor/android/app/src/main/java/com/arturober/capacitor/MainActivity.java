@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.arturober.capacitor;
 
 import android.os.Bundle;
 
@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import com.servicesight.capacitor.startnavigation.StartNavigationPlugin;
 import com.codetrixstudio.capacitor.GoogleAuth.GoogleAuth;
+import jp.rdlabo.capacitor.plugin.facebook.FacebookLogin;
 
 public class MainActivity extends BridgeActivity {
   @Override
@@ -21,6 +22,7 @@ public class MainActivity extends BridgeActivity {
       // Ex: add(TotallyAwesomePlugin.class);
       add(StartNavigationPlugin.class);
       add(GoogleAuth.class);
+      add(FacebookLogin.class);
     }});
   }
 }

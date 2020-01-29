@@ -18,6 +18,11 @@ export class AppComponent {
       icon: 'apps'
     },
     {
+      title: 'Barcode Scanner',
+      url: '/barcode-scanner',
+      icon: 'barcode'
+    },
+    {
       title: 'Camera',
       url: '/camera',
       icon: 'camera'
@@ -38,9 +43,19 @@ export class AppComponent {
       icon: 'navigate'
     },
     {
+      title: 'Facebook Login',
+      url: '/facebook-login',
+      icon: 'logo-facebook'
+    },
+    {
       title: 'Filesystem',
       url: '/filesystem',
       icon: 'folder'
+    },
+    {
+      title: 'Flashlight',
+      url: '/flashlight',
+      icon: 'flashlight'
     },
     {
       title: 'Geolocation',

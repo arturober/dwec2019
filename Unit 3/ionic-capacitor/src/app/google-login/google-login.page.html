@@ -7,14 +7,14 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <ion-list *ngIf="user">
     <ion-item text-wrap>
       <ion-avatar slot="start">
         <ion-img [src]="user.imageUrl"></ion-img>
       </ion-avatar>
       <ion-label>
-        <h2>{{user.name}}</h2>
+        <h2>{{user.displayName}}</h2>
         <p>{{user.email}}</p>
       </ion-label>
     </ion-item>

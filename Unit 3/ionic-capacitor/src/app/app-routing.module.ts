@@ -74,6 +74,18 @@ const routes: Routes = [
   {
     path: 'google-login',
     loadChildren: () => import('./google-login/google-login.module').then( m => m.GoogleLoginPageModule)
+  },
+  {
+    path: 'facebook-login',
+    loadChildren: () => import('./facebook-login/facebook-login.module').then( m => m.FacebookLoginPageModule)
+  },
+  {
+    path: 'barcode-scanner',
+    loadChildren: () => import('./barcode-scanner/barcode-scanner.module').then( m => m.BarcodeScannerPageModule)
+  },
+  {
+    path: 'flashlight',
+    loadChildren: () => import('./flashlight/flashlight.module').then( m => m.FlashlightPageModule)
   }
 ];
 

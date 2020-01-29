@@ -1,5 +1,5 @@
 {
-  "appId": "com.example.capacitor",
+  "appId": "com.arturober.capacitor",
   "appName": "Ionic Capacitor",
   "bundledWebRuntime": false,
   "npmClient": "npm",
