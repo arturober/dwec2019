@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from '../interfaces/product.interface';
 import { Events } from '@ionic/angular';
 import { Observable, of } from 'rxjs';
+import { share } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-details',
@@ -14,15 +15,13 @@ export class ProductDetailsPage implements OnInit {
   product: Product;
   product$: Observable<Product>;
 
-  constructor(private productService: ProductService, private route: ActivatedRoute, private events: Events) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute, private events: Events) { 
+    this.product$ = this.productService.getProduct(this.route.snapshot.params.id).pipe(share());
+  }
 
   ngOnInit() {
-    this.product$ = this.productService.getProduct(this.route.snapshot.params.id);
     this.product$.subscribe(
-      product => {
-        this.product = product;
-        this.events.publish('product', this.product);
-      }
+      product => this.product = product
     );
   }
 
