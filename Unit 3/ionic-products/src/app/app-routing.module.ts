@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LogoutActivateGuard } from './guards/logout-activate.guard';
+import { LoginActivateGuard } from './guards/login-activate.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { path: 'auth', loadChildren: './auth/auth.module#AuthModule', canActivate: [LogoutActivateGuard] },
+  { path: 'products', loadChildren: './products/products.module#ProductsModule', canActivate: [LoginActivateGuard] },
 ];
 
 @NgModule({

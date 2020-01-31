@@ -1,5 +1,7 @@
 {
   "name": "ionic-products",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

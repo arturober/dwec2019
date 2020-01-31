@@ -1,0 +1,8 @@
+{
+  "appId": "com.arturober.products",
+  "appName": "Ionic products",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
