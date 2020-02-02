@@ -9,7 +9,9 @@ android {
 
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
+    implementation project(':arturober-capacitor-contacts')
     implementation project(':codetrix-studio-capacitor-google-auth')
+    implementation project(':jeepq-capacitor')
     implementation project(':proteansoftware-capacitor-start-navigation')
     implementation project(':rdlabo-capacitor-facebook-login')
     implementation "com.android.support:support-v4:27.+"

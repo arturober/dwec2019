@@ -33,6 +33,11 @@ export class AppComponent {
       icon: 'clipboard'
     },
     {
+      title: 'Contacts',
+      url: '/contacts',
+      icon: 'contacts'
+    },
+    {
       title: 'Device Info',
       url: '/device',
       icon: 'phone-portrait'
@@ -96,6 +101,11 @@ export class AppComponent {
       title: 'Social sharing',
       url: '/share',
       icon: 'share'
+    },
+    {
+      title: 'SQLite',
+      url: '/sqlite',
+      icon: 'grid'
     },
     {
       title: 'Storage',

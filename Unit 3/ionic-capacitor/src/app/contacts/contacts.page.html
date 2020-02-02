@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Contacts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngIf="result">
+    <ion-item *ngFor="let contact of result.contacts">
+      <ion-label>
+        <h3>{{contact.name}}</h3>
+        <p>{{contact.phones?.join(', ')}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

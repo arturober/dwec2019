@@ -86,6 +86,14 @@ const routes: Routes = [
   {
     path: 'flashlight',
     loadChildren: () => import('./flashlight/flashlight.module').then( m => m.FlashlightPageModule)
+  },
+  {
+    path: 'sqlite',
+    loadChildren: () => import('./sqlite/sqlite.module').then( m => m.SqlitePageModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contacts.module').then( m => m.ContactsPageModule)
   }
 ];
 
