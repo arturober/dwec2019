@@ -51,7 +51,7 @@ export class ProductFormPage implements OnInit {
       quality: 90,
       height: 640,
       width: 640,
-      allowEditing: true,
+      // allowEditing: true,
       resultType: CameraResultType.DataUrl // Base64 (url encoded)
     });
 
@@ -63,7 +63,7 @@ export class ProductFormPage implements OnInit {
       source: CameraSource.Photos,
       height: 640,
       width: 640,
-      allowEditing: true,
+      // allowEditing: true,
       resultType: CameraResultType.DataUrl // Base64 (url encoded)
     });
 

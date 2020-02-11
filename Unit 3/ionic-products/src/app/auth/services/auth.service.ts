@@ -19,8 +19,8 @@ export class AuthService {
     this.loginChange$.emit(logged);
   }
 
-  login(email: string, password: string): Observable<void> {
-    return this.http.post<{accessToken: string}>('auth/login', {email, password}).pipe(
+  login(email: string, password: string, firebaseToken: string): Observable<void> {
+    return this.http.post<{accessToken: string}>('auth/login', {email, password, firebaseToken}).pipe(
       switchMap(async r => { // switchMap must return a Promise or observable (a Promise in this case)
         try {
           await Storage.set({key: 'fs-token', value: r.accessToken});
